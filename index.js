@@ -43,6 +43,8 @@ async function run() {
             res.send(result);
       });
 
+      console.log('all ok');
+
       app.delete('/deleteOrder/:id', async(req, res)=>{
         console.log(req.params.id);
         const result = await bookingCollection.deleteOne({_id:ObjectId(req.params.id),
